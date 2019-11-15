@@ -9,14 +9,23 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertTrue;
 
 public class ScanMaltaStepDefs {
 
     WebDriver browser = null;
 
+    public void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds*1000);
+        } catch (Exception e) {}
+    }
+
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "/users/mark/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "D:/matts/Downloads/chromedriver.exe");
         browser = new ChromeDriver();
     }
 
@@ -24,6 +33,40 @@ public class ScanMaltaStepDefs {
     public void teardown() {
         browser.quit();
     }
+
+    @Given("I am a user on the website")
+    public void i_am_a_user_on_the_website() {
+        browser.get("https://www.scanmalta.com/newstore/customer/account/login/");
+        //sleep(5);
+    }
+
+    @When("I log in using valid credentials {string} and {string}")
+    public void i_log_in_using_valid_credentials(String username, String password) {
+        browser.findElement(By.name("login[username]")).sendKeys(username);
+        browser.findElement(By.name("login[password]")).sendKeys(password);
+        browser.findElement(By.name("send")).submit();
+        sleep(2);
+    }
+
+    @Then("I should be logged in")
+    public void i_should_be_logged_in() {
+        assertTrue(browser.findElement(By.className("hello")).getText().contains("Hello, Matthew Schembri!"));
+    }
+
+    @When("I log in using invalid credentials {string} and {string}")
+    public void i_log_in_using_invalid_credentials_and(String username, String wrongPass) {
+        browser.findElement(By.name("login[username]")).sendKeys(username);
+        browser.findElement(By.name("login[password]")).sendKeys(wrongPass);
+        browser.findElement(By.name("send")).submit();
+        sleep(2);
+    }
+
+    @Then("I should not be logged in")
+    public void i_should_not_be_logged_in() {
+        assertTrue(browser.findElement(By.className("error-msg")).getText().contains("Invalid login or password."));
+        // Invalid login or password.
+    }
+
 
 
 }
