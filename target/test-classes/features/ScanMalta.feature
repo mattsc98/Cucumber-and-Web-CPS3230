@@ -1,9 +1,9 @@
 Feature: ScanMalta
 
-#  Scenario: 1 Valid Login
-#  Given I am a user on the website
-#  When I log in using valid credentials "farseersc28@gmail.com" and "Test@123"
-#  Then I should be logged in
+  Scenario: 1 Valid Login
+  Given I am a user on the website
+  When I log in using valid credentials "farseersc28@gmail.com" and "Test@123"
+  Then I should be logged in
 
   Scenario: 2 Invalid Login
   Given I am a user on the website

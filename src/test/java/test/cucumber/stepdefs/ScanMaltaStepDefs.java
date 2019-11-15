@@ -9,6 +9,8 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pageObjects.ScanMaltaPageObject;
+
 import static org.junit.Assert.*;
 
 import static org.junit.Assert.assertTrue;
@@ -16,6 +18,7 @@ import static org.junit.Assert.assertTrue;
 public class ScanMaltaStepDefs {
 
     WebDriver browser = null;
+    public ScanMaltaPageObject sut;
 
     public void sleep(int seconds) {
         try {
@@ -27,6 +30,7 @@ public class ScanMaltaStepDefs {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "D:/matts/Downloads/chromedriver.exe");
         browser = new ChromeDriver();
+        sut = new ScanMaltaPageObject(browser);
     }
 
     @After
@@ -36,16 +40,18 @@ public class ScanMaltaStepDefs {
 
     @Given("I am a user on the website")
     public void i_am_a_user_on_the_website() {
-        browser.get("https://www.scanmalta.com/newstore/customer/account/login/");
+        sut.getPage();
+        //browser.get("https://www.scanmalta.com/newstore/customer/account/login/");
         //sleep(5);
     }
 
     @When("I log in using valid credentials {string} and {string}")
     public void i_log_in_using_valid_credentials(String username, String password) {
-        browser.findElement(By.name("login[username]")).sendKeys(username);
-        browser.findElement(By.name("login[password]")).sendKeys(password);
-        browser.findElement(By.name("send")).submit();
-        sleep(2);
+//        browser.findElement(By.name("login[username]")).sendKeys(username);
+//        browser.findElement(By.name("login[password]")).sendKeys(password);
+//        browser.findElement(By.name("send")).submit();
+//        sleep(2);
+        sut.validLogin(username, password);
     }
 
     @Then("I should be logged in")
