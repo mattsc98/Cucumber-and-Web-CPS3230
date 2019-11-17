@@ -56,21 +56,23 @@ public class ScanMaltaStepDefs {
 
     @Then("I should be logged in")
     public void i_should_be_logged_in() {
-        assertTrue(browser.findElement(By.className("hello")).getText().contains("Hello, Matthew Schembri!"));
+//        assertTrue(browser.findElement(By.className("hello")).getText().contains("Hello, Matthew Schembri!"));
+        sut.validateLogin();
     }
 
     @When("I log in using invalid credentials {string} and {string}")
     public void i_log_in_using_invalid_credentials_and(String username, String wrongPass) {
-        browser.findElement(By.name("login[username]")).sendKeys(username);
-        browser.findElement(By.name("login[password]")).sendKeys(wrongPass);
-        browser.findElement(By.name("send")).submit();
-        sleep(2);
+//        browser.findElement(By.name("login[username]")).sendKeys(username);
+//        browser.findElement(By.name("login[password]")).sendKeys(wrongPass);
+//        browser.findElement(By.name("send")).submit();
+//        sleep(2);
+        sut.invalidLogin(username, wrongPass);
     }
 
     @Then("I should not be logged in")
     public void i_should_not_be_logged_in() {
-        assertTrue(browser.findElement(By.className("error-msg")).getText().contains("Invalid login or password."));
-        // Invalid login or password.
+        //assertTrue(browser.findElement(By.className("error-msg")).getText().contains("Invalid login or password."));
+        sut.validateInvalidLogin();
     }
 
 

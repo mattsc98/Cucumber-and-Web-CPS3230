@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CucumberRunner">
+  <component name="RunManager" selected="Cucumber java.Scenario: 2 Invalid Login">
     <configuration name="Feature: ScanMalta" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" />
@@ -91,6 +90,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: 2 Invalid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" />
+      <option name="GLUE" value="test.cucumber.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Assignment 2" />
+      <option name="NAME_FILTER" value="^2 Invalid Login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^2 Invalid Login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: 2 Invalid Login" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CucumberRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Assignment 2" />
       <extension name="coverage">
@@ -108,8 +126,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CucumberRunner" />
+        <item itemvalue="Cucumber java.Scenario: 2 Invalid Login" />
         <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
+        <item itemvalue="JUnit.CucumberRunner" />
         <item itemvalue="Cucumber java.Feature: ScanMalta" />
       </list>
     </recent_temporary>
@@ -127,7 +146,8 @@
       <workItem from="1573549397371" duration="8460000" />
       <workItem from="1573568201435" duration="4787000" />
       <workItem from="1573641594123" duration="4364000" />
-      <workItem from="1573722719443" duration="8884000" />
+      <workItem from="1573722719443" duration="8948000" />
+      <workItem from="1573993571312" duration="2924000" />
     </task>
     <servers />
   </component>

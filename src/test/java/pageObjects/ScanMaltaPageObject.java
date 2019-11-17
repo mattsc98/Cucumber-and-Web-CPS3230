@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.Assert.assertTrue;
+
 public class ScanMaltaPageObject {
 
     WebDriver browser = null;
@@ -27,6 +29,21 @@ public class ScanMaltaPageObject {
         browser.findElement(By.name("login[password]")).sendKeys(password);
         browser.findElement(By.name("send")).submit();
         sleep(2);
+    }
+
+    public void validateLogin() {
+        assertTrue(browser.findElement(By.className("hello")).getText().contains("Hello, Matthew Schembri!"));
+    }
+
+    public void invalidLogin(String username, String wrongPass) {
+        browser.findElement(By.name("login[username]")).sendKeys(username);
+        browser.findElement(By.name("login[password]")).sendKeys(wrongPass);
+        browser.findElement(By.name("send")).submit();
+        sleep(2);
+    }
+
+    public void validateInvalidLogin() {
+        assertTrue(browser.findElement(By.className("error-msg")).getText().contains("Invalid login or password."));
     }
 
 }

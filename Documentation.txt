@@ -1,0 +1,51 @@
+After setting up the maven project, the initial classes and methods were created. 
+ScanMalta was chosen as the site to be tested on as it was recommended as an example
+and I have also used the site before. Therefore I already had an idea of how the 
+website works. 
+
+-Scenario 1
+A new account was registered with ScanMalta for the purpose of the assignment.
+The 1st Scenario is to test the valid login feature.
+First, the login page for the site was loaded into the browser. 
+Next the findElement Selenium commands were used to locate were the username and
+password are meant to be entered.
+After entering them, the sign in button is pressed.
+The login was then validated by asserting that the Welcome User page is loaded.
+This shows that you are in fact logged in as it says "Hello, [name]".
+
+
+-Scenario 2
+This scenario was tested similarly to the 1st one, only this time the password
+passed through was purposely incorrect. 
+Now after the sign in button is pressed, rather than the welcome page, the user
+is now greeted with a pop up stating "Invalid login or password".
+Therefore this test was verified by asserting that the pop up actually shows up
+when invalid credentials are entered.
+
+
+-----------------------------------------------------------------------------------------------
+From here on out, the next couple of scenarios all require the user to be logged in.
+Therefore it made sense to make use of page objects, so that within the StepDefs class
+we can simply just call the methods from the page objects rather than having to 
+repeat the same code to log in every time.
+This way we save time and effort and just make use of calling the method when it is
+required.
+
+Within the StepDefs class, the PageObject sut (for system under test) was created
+so that the methods from the PageObject can be used within this class.
+Then in the PageObject class, the test code from the StepDefs were placed into 
+methods. 
+Next, the methods within the StepDefs class were altered so that they simply just 
+call the methods from the PageObject class. 
+
+-----------------------------------------------------------------------------------------------
+
+-Scenario 3
+
+
+
+
+
+
+
+
