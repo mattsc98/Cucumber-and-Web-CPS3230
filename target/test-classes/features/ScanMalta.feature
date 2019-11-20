@@ -10,11 +10,11 @@ Feature: ScanMalta
   When I log in using invalid credentials "farseersc28@gmail.com" and "test123"
   Then I should not be logged in
 
-#  Scenario: 3 Product Search
-#  Given I am a logged in user on the website
-#  When I search for a product
-#  And I select the first product in the list
-#  Then I should see the product details
+  Scenario: 3 Product Search
+  Given I am a logged in user on the website "farseersc28@gmail.com" and "Test@123"
+  When I search for a product "ssd"
+  And I select the first product in the list
+  Then I should see the product details
 #
 #  Scenario: 4 Add product to cart
 #  Given I am a logged in user on the website

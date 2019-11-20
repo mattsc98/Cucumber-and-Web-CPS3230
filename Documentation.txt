@@ -41,7 +41,20 @@ call the methods from the PageObject class.
 -----------------------------------------------------------------------------------------------
 
 -Scenario 3
-
+This scenario requires the user to be logged in and perform a product search.
+The first bit makes use of the getPage and validLogin methods in order to
+log the user in and verify that they are logged in. 
+These are the same methods used for the previous scenarios.
+In order to perform a product search, a method called search was created which
+finds the search bar and inputs the string containing the product's name.
+It then submits which starts the search.
+Next we are required to select the 1st product that comes up from the search.
+This is done by creating a list of type WebElement that lists all the products
+displayed. 
+A WebElement called firstProduct is then made to store the 1st element within the list.
+This firstProduct is then selected.
+The product details is meant to be displayed, and this is verified by asserting that
+the "Product Description" can be seen.
 
 
 

@@ -75,6 +75,28 @@ public class ScanMaltaStepDefs {
         sut.validateInvalidLogin();
     }
 
+    @Given("I am a logged in user on the website {string} and {string}")
+    public void i_am_a_logged_in_user_on_the_website(String username, String password) {
+        sut.getPage();
+        sut.validLogin(username, password);
+    }
+
+    @When("I search for a product {string}")
+    public void i_search_for_a_product(String product) {
+        sut.search(product);
+    }
+
+    @When("I select the first product in the list")
+    public void i_select_the_first_product_in_the_list() {
+        sut.selectFirstProduct();
+    }
+
+    @Then("I should see the product details")
+    public void i_should_see_the_product_details() {
+        sut.productDetails();
+    }
+
+
 
 
 }

@@ -2,7 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
@@ -45,5 +48,25 @@ public class ScanMaltaPageObject {
     public void validateInvalidLogin() {
         assertTrue(browser.findElement(By.className("error-msg")).getText().contains("Invalid login or password."));
     }
+
+    public void search(String product) {
+        browser.findElement(By.id("search")).sendKeys(product);
+        browser.findElement(By.className("icon-search")).submit();
+        sleep(2);
+    }
+
+    public void selectFirstProduct() {
+        //browser.findElement(By.xpath("/html/body/div[1]/div/section/ul/li[1]")).submit();
+        //create list to hold all the list item products displayed, then retrieve the 1st one
+        List<WebElement> productsList = browser.findElements(By.className("item-images"));
+        WebElement firstProduct = productsList.get(0);
+        firstProduct.click();
+        sleep(2);
+    }
+
+    public void productDetails() {
+        assertTrue(browser.findElement(By.className("product-description")).getText().contains("Product Description"));
+    }
+
 
 }
