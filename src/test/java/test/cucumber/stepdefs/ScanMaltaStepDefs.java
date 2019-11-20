@@ -6,12 +6,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageObjects.ScanMaltaPageObject;
-
-import static org.junit.Assert.*;
 
 import static org.junit.Assert.assertTrue;
 
@@ -38,6 +35,7 @@ public class ScanMaltaStepDefs {
         browser.quit();
     }
 
+    //1
     @Given("I am a user on the website")
     public void i_am_a_user_on_the_website() {
         sut.getPage();
@@ -60,6 +58,7 @@ public class ScanMaltaStepDefs {
         sut.validateLogin();
     }
 
+    //2
     @When("I log in using invalid credentials {string} and {string}")
     public void i_log_in_using_invalid_credentials_and(String username, String wrongPass) {
 //        browser.findElement(By.name("login[username]")).sendKeys(username);
@@ -75,6 +74,7 @@ public class ScanMaltaStepDefs {
         sut.validateInvalidLogin();
     }
 
+    //3
     @Given("I am a logged in user on the website {string} and {string}")
     public void i_am_a_logged_in_user_on_the_website(String username, String password) {
         sut.getPage();
@@ -93,7 +93,37 @@ public class ScanMaltaStepDefs {
 
     @Then("I should see the product details")
     public void i_should_see_the_product_details() {
-        sut.productDetails();
+        sut.productDetailsFound();
+    }
+
+    //4
+//    @Given("I am a logged in user on the website  {string} and {string}")
+//    public void i_am_a_logged_in_user_on_the_website(String username, String password) {
+//        sut.getPage();
+//        sut.validLogin(username, password);
+//    }
+
+    @Given("my shopping cart is empty")
+    public void my_shopping_cart_is_empty() {
+        sut.goToCart();
+        sut.emptyCart();
+    }
+
+    @When("I view the details of a product {string}")
+    public void i_view_the_details_of_a_product(String product) {
+        sut.search(product);
+        sut.selectFirstProduct();
+    }
+
+    @When("I choose to buy the product")
+    public void i_choose_to_buy_the_product() {
+        sut.addToCart();
+    }
+
+    @Then("my shopping cart should contain {int} item")
+    public void my_shopping_cart_should_contain_item(Integer int1) {
+        sut.viewCartAfterAdd();
+        //sut.cartHasOneItem(int1);
     }
 
 

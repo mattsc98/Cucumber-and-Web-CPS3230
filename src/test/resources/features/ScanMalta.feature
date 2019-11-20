@@ -15,13 +15,13 @@ Feature: ScanMalta
   When I search for a product "ssd"
   And I select the first product in the list
   Then I should see the product details
-#
-#  Scenario: 4 Add product to cart
-#  Given I am a logged in user on the website
-#  And my shopping cart is empty
-#  When I view the details of a product
-#  And I choose to buy the product
-#  Then my shopping cart should contain 1 item
+
+  Scenario: 4 Add product to cart
+  Given I am a logged in user on the website "farseersc28@gmail.com" and "Test@123"
+  And my shopping cart is empty
+  When I view the details of a product "ssd"
+  And I choose to buy the product
+  Then my shopping cart should contain 1 item
 #
 #  Scenario: 5 Add multiple products to cart
 #  Given I am a logged in user on the website

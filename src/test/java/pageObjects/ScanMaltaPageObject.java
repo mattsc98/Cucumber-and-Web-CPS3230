@@ -42,7 +42,7 @@ public class ScanMaltaPageObject {
         browser.findElement(By.name("login[username]")).sendKeys(username);
         browser.findElement(By.name("login[password]")).sendKeys(wrongPass);
         browser.findElement(By.name("send")).submit();
-        sleep(2);
+        sleep(3);
     }
 
     public void validateInvalidLogin() {
@@ -64,9 +64,36 @@ public class ScanMaltaPageObject {
         sleep(2);
     }
 
-    public void productDetails() {
+    public void productDetailsFound() {
         assertTrue(browser.findElement(By.className("product-description")).getText().contains("Product Description"));
     }
 
+    public void goToCart() {
+        //browser.findElement(By.className("icon-cart")).submit(); CHECK THIS LATER
+        browser.get("https://www.scanmalta.com/newstore/checkout/cart/");
+        sleep(2);
+    }
+
+    public void emptyCart() {
+        assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
+        sleep(2);
+    }
+
+    public void addToCart() {
+        browser.findElement(By.id("product-addtocart-button")).submit();
+        sleep(7); //due to popup that follows
+    }
+
+    public void viewCartAfterAdd() {
+        List<WebElement> productsList = browser.findElements(By.className("data-table cart-table"));
+
+        int items = productsList.size();
+        System.out.println("Number in cart " + items);
+    }
+
+    public void cartHasOneItem(Integer int1) {
+        //int items = viewCartAfterAdd();
+        //System.out.println("Number in cart " + items);
+    }
 
 }
