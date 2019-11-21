@@ -5,10 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,10 +147,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber java.Scenario: 4 Add product to cart" />
+        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
         <item itemvalue="Cucumber java.Scenario: 3 Product Search" />
         <item itemvalue="JUnit.CucumberRunner" />
         <item itemvalue="Cucumber java.Scenario: 2 Invalid Login" />
-        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +169,8 @@
       <workItem from="1573641594123" duration="4364000" />
       <workItem from="1573722719443" duration="8948000" />
       <workItem from="1573993571312" duration="8939000" />
-      <workItem from="1574249385656" duration="6297000" />
+      <workItem from="1574249385656" duration="6857000" />
+      <workItem from="1574328999511" duration="4291000" />
     </task>
     <servers />
   </component>

@@ -121,9 +121,9 @@ public class ScanMaltaStepDefs {
     }
 
     @Then("my shopping cart should contain {int} item")
-    public void my_shopping_cart_should_contain_item(Integer int1) {
+    public void my_shopping_cart_should_contain_item(int int1) {
         sut.viewCartAfterAdd();
-        //sut.cartHasOneItem(int1);
+        sut.cartHasOneItem(int1);
     }
 
 

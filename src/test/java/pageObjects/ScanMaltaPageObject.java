@@ -3,10 +3,10 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ScanMaltaPageObject {
@@ -75,7 +75,9 @@ public class ScanMaltaPageObject {
     }
 
     public void emptyCart() {
-        assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
+        //assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
+        //rather than check if it's empty, just make the cart empty if it is not empty
+        browser.findElement(By.id("empty_cart_button")).click();
         sleep(2);
     }
 
@@ -84,16 +86,19 @@ public class ScanMaltaPageObject {
         sleep(7); //due to popup that follows
     }
 
-    public void viewCartAfterAdd() {
-        List<WebElement> productsList = browser.findElements(By.className("data-table cart-table"));
+    public int viewCartAfterAdd() {
+        List<WebElement> cartList = browser.findElements(By.id("shopping-cart-table"));
 
-        int items = productsList.size();
-        System.out.println("Number in cart " + items);
+        int int1 = cartList.size();
+        //System.out.println("Number in cart " + items);  //test to see that cart got incremented
+
+        return int1;
     }
 
-    public void cartHasOneItem(Integer int1) {
-        //int items = viewCartAfterAdd();
-        //System.out.println("Number in cart " + items);
+    public void cartHasOneItem(int int1) {
+        int items = viewCartAfterAdd();
+        //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
+        assertEquals(items, int1);
     }
 
 }

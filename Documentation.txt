@@ -57,6 +57,29 @@ The product details is meant to be displayed, and this is verified by asserting 
 the "Product Description" can be seen.
 
 
+-Scenario 4
+This scenario requires the user to be logged in, search for a product and then add it to cart.
+The methods from the previous scenarios were used to log in and perform the search.
+However in between them, after logging in the user is directed to their cart.
+Here it is checked that the cart is currently empty, meaning it has no products added.
+At first this was done by asserting that the page contains the text "Shopping Cart is Empty"
+This was qiuckly scrapped as later on when an item was added to the cart, it would be saved
+to it, meaning that even after the testing ended it would remain in the cart.
+It was problematic as whenever a test was run it would see that the cart is not empty 
+and just fail and stop there, unless it was manually removed.
+Therefore to avoid all this, rather than making use of the assert, the "Empty Cart" button
+was clicked to empty the cart.
+Next the product was searched and the first item was selected (using previous methods).
+Then the "Add to cart" button was clicked from the details page in order to add the product to the cart. 
+Now the cart should at least contain 1 item.
+The viewCartAfterAdd method was created in order to hold the amount of items found in the cart.
+This works by creating a list cartList of type WebElement which lists all the items in the cart.
+The java .size() method is used to calculate the amount present in the list.
+The method cartHasOneItem is then used to verify that the cart has indeed 1 product in it. 
+This is done by creating an integer item which calls the viewCartAfterAdd method to calculate the 
+amount of products in the cart.
+This amount is then asserted to be equal to 1.
+
 
 
 
