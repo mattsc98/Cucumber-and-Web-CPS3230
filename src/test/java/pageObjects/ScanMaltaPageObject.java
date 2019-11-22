@@ -77,6 +77,10 @@ public class ScanMaltaPageObject {
     public void emptyCart() {
         //assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
         //rather than check if it's empty, just make the cart empty if it is not empty
+//        if(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty")) {
+//            assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
+//        }
+//        else browser.findElement(By.id("empty_cart_button")).click();
         browser.findElement(By.id("empty_cart_button")).click();
         sleep(2);
     }
@@ -89,14 +93,39 @@ public class ScanMaltaPageObject {
     public int viewCartAfterAdd() {
         List<WebElement> cartList = browser.findElements(By.id("shopping-cart-table"));
 
-        int int1 = cartList.size();
         //System.out.println("Number in cart " + items);  //test to see that cart got incremented
 
-        return int1;
+        return cartList.size();
     }
 
     public void cartHasOneItem(int int1) {
         int items = viewCartAfterAdd();
+        //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
+        assertEquals(items, int1);
+    }
+
+    public void selectMultipleProductsAndAddToCart() {
+        //create list to hold all the list item products displayed, then retrieve them
+
+        int numProducts = 3;
+        int i = 0;
+
+        do {
+            List<WebElement> productsList = browser.findElements(By.className("item-images"));
+            WebElement product = productsList.get(i);
+            product.click();
+            sleep(2);
+            addToCart();
+            if(i < 2) search("ssd");
+            sleep(1);
+            i++;
+        }while(i != numProducts);
+        
+    }
+
+    public void cartHasMultipleItems() {
+        int items = viewCartAfterAdd();
+        int int1 = 3;
         //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
         assertEquals(items, int1);
     }

@@ -126,6 +126,26 @@ public class ScanMaltaStepDefs {
         sut.cartHasOneItem(int1);
     }
 
+    //5
+//    @Given("I am a logged in user on the website {string} and {string}")
+//    public void i_am_a_logged_in_user_on_the_website(String username, String password) {
+//        // Write code here that turns the phrase above into concrete actions
+//        throw new cucumber.api.PendingException();
+//    }
+
+
+    @When("I add <num-products> products to my shopping cart")
+    public void i_add_num_products_products_to_my_shopping_cart() {
+        sut.search("ssd");
+        sut.selectMultipleProductsAndAddToCart();
+    }
+
+    @Then("my shopping cart should contain <num-products> items")
+    public void my_shopping_cart_should_contain_num_products_items() {
+        sut.goToCart();
+        sut.cartHasMultipleItems();
+    }
+
 
 
 

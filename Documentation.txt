@@ -67,8 +67,9 @@ This was qiuckly scrapped as later on when an item was added to the cart, it wou
 to it, meaning that even after the testing ended it would remain in the cart.
 It was problematic as whenever a test was run it would see that the cart is not empty 
 and just fail and stop there, unless it was manually removed.
-Therefore to avoid all this, rather than making use of the assert, the "Empty Cart" button
+Therefore to avoid all this, rather than just making use of the assert, the "Empty Cart" button
 was clicked to empty the cart.
+This was done within a simple if statement.
 Next the product was searched and the first item was selected (using previous methods).
 Then the "Add to cart" button was clicked from the details page in order to add the product to the cart. 
 Now the cart should at least contain 1 item.
@@ -79,6 +80,10 @@ The method cartHasOneItem is then used to verify that the cart has indeed 1 prod
 This is done by creating an integer item which calls the viewCartAfterAdd method to calculate the 
 amount of products in the cart.
 This amount is then asserted to be equal to 1.
+
+
+-Scenario 5
+Starts off with Empty cart
 
 
 
