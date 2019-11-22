@@ -71,7 +71,7 @@ public class ScanMaltaPageObject {
     public void goToCart() {
         //browser.findElement(By.className("icon-cart")).submit(); CHECK THIS LATER
         browser.get("https://www.scanmalta.com/newstore/checkout/cart/");
-        sleep(2);
+        sleep(3);
     }
 
     public void emptyCart() {
@@ -81,7 +81,11 @@ public class ScanMaltaPageObject {
 //            assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
 //        }
 //        else browser.findElement(By.id("empty_cart_button")).click();
-        browser.findElement(By.id("empty_cart_button")).click();
+        //assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
+//        browser.findElement(By.id("empty_cart_button")).click();
+        if(getCartAmount() != 0) {
+            browser.findElement(By.id("empty_cart_button")).click();
+        }
         sleep(2);
     }
 
@@ -90,43 +94,44 @@ public class ScanMaltaPageObject {
         sleep(7); //due to popup that follows
     }
 
-    public int viewCartAfterAdd() {
-        List<WebElement> cartList = browser.findElements(By.id("shopping-cart-table"));
-
-        //System.out.println("Number in cart " + items);  //test to see that cart got incremented
-
-        return cartList.size();
+    public int getCartAmount() {
+//        List<WebElement> cartList = browser.findElements(By.id("shopping-cart-table"));
+//
+//        //System.out.println("Number in cart " + items);  //test to see that cart got incremented
+//
+//        return cartList.size();
+        String amount = browser.findElement(By.xpath("//span[contains(text(), 'items')]")).getText();
+        return Integer.parseInt(amount.split(" ")[0]);
     }
 
     public void cartHasOneItem(int int1) {
-        int items = viewCartAfterAdd();
+        int items = getCartAmount();
         //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
         assertEquals(items, int1);
     }
 
-    public void selectMultipleProductsAndAddToCart() {
-        //create list to hold all the list item products displayed, then retrieve them
+    public void selectMultipleProductsAndAddToCart(int int1) {
+        //create list to hold all the list item products displayed, then add to cart
 
-        int numProducts = 3;
         int i = 0;
 
         do {
+            search("ssd");
             List<WebElement> productsList = browser.findElements(By.className("item-images"));
+            System.out.println("Loop No. " + i);
             WebElement product = productsList.get(i);
+            sleep(2);
             product.click();
             sleep(2);
             addToCart();
-            if(i < 2) search("ssd");
-            sleep(1);
             i++;
-        }while(i != numProducts);
+        }while(i != int1);
         
     }
 
-    public void cartHasMultipleItems() {
-        int items = viewCartAfterAdd();
-        int int1 = 3;
-        //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
+    public void cartHasMultipleItems(int int1) {
+        int items = getCartAmount();
+        System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
         assertEquals(items, int1);
     }
 

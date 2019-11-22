@@ -122,7 +122,7 @@ public class ScanMaltaStepDefs {
 
     @Then("my shopping cart should contain {int} item")
     public void my_shopping_cart_should_contain_item(int int1) {
-        sut.viewCartAfterAdd();
+        sut.getCartAmount();
         sut.cartHasOneItem(int1);
     }
 
@@ -134,19 +134,15 @@ public class ScanMaltaStepDefs {
 //    }
 
 
-    @When("I add <num-products> products to my shopping cart")
-    public void i_add_num_products_products_to_my_shopping_cart() {
-        sut.search("ssd");
-        sut.selectMultipleProductsAndAddToCart();
+    @When("I add {int} products to my shopping cart")
+    public void i_add_num_products_products_to_my_shopping_cart(int int1) {
+        sut.selectMultipleProductsAndAddToCart(int1);
     }
 
-    @Then("my shopping cart should contain <num-products> items")
-    public void my_shopping_cart_should_contain_num_products_items() {
-        sut.goToCart();
-        sut.cartHasMultipleItems();
+    @Then("my shopping cart should contain {int} items")
+    public void my_shopping_cart_should_contain_num_products_items(int int1) {
+        sut.getCartAmount();
+        sut.cartHasMultipleItems(int1);
     }
-
-
-
 
 }

@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="eaeaff12-781a-4851-b2f0-143ffa1c77eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/Assignment 2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,8 +152,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber java.Scenario: 5 Add multiple products to cart" />
-        <item itemvalue="Cucumber java.Scenario: 4 Add product to cart" />
         <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
+        <item itemvalue="Cucumber java.Scenario: 4 Add product to cart" />
         <item itemvalue="Cucumber java.Scenario: 3 Product Search" />
         <item itemvalue="JUnit.CucumberRunner" />
       </list>
@@ -173,7 +176,11 @@
       <workItem from="1573993571312" duration="8939000" />
       <workItem from="1574249385656" duration="6857000" />
       <workItem from="1574328999511" duration="4889000" />
-      <workItem from="1574415581074" duration="5171000" />
+      <workItem from="1574415581074" duration="11614000" />
+      <workItem from="1574438975744" duration="4897000" />
+      <workItem from="1574444025028" duration="589000" />
+      <workItem from="1574444721730" duration="164000" />
+      <workItem from="1574445355724" duration="2189000" />
     </task>
     <servers />
   </component>

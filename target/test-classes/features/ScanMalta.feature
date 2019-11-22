@@ -23,12 +23,18 @@ Feature: ScanMalta
   And I choose to buy the product
   Then my shopping cart should contain 1 item
 
-  Scenario: 5 Add multiple products to cart
-  Given I am a logged in user on the website "farseersc28@gmail.com" and "Test@123"
-  And my shopping cart is empty
-  When I add <num-products> products to my shopping cart
-  Then my shopping cart should contain <num-products> items
-#num-products: 3, 5, 10
+  Scenario Outline: 5 Add multiple products to cart
+    Given I am a logged in user on the website "farseersc28@gmail.com" and "Test@123"
+    And my shopping cart is empty
+    When I add <num-products> products to my shopping cart
+    Then my shopping cart should contain <num-products> items
+    Examples:
+      | num-products |
+      | 3            |
+      | 5            |
+      | 10           |
+
+#  num-products: 3, 5, 10
 #
 #  Scenario: 6 Removing a product from cart
 #  Given I am a logged in user on the website
