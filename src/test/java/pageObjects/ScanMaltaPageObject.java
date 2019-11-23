@@ -36,6 +36,7 @@ public class ScanMaltaPageObject {
 
     public void validateLogin() {
         assertTrue(browser.findElement(By.className("hello")).getText().contains("Hello, Matthew Schembri!"));
+        sleep(2);
     }
 
     public void invalidLogin(String username, String wrongPass) {
@@ -83,6 +84,7 @@ public class ScanMaltaPageObject {
 //        else browser.findElement(By.id("empty_cart_button")).click();
         //assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
 //        browser.findElement(By.id("empty_cart_button")).click();
+        goToCart();
         if(getCartAmount() != 0) {
             browser.findElement(By.id("empty_cart_button")).click();
         }
@@ -133,6 +135,24 @@ public class ScanMaltaPageObject {
         int items = getCartAmount();
         System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
         assertEquals(items, int1);
+    }
+
+    public void addTwoProducts() {
+        search("ssd");
+        selectFirstProduct();
+        addToCart();
+
+        search("adapter");
+        selectFirstProduct();
+        addToCart();
+    }
+
+    public void removeFirstProduct() {
+        WebElement shoppingCartTable = browser.findElement(By.id("shopping-cart-table"));
+        WebElement shoppingCartTableBody = shoppingCartTable.findElement(By.xpath("//table/tbody"));
+        WebElement firstProduct = shoppingCartTableBody.findElement(By.className("first"));
+
+        firstProduct.findElement(By.className("btn-remove")).click();
     }
 
 }

@@ -105,7 +105,6 @@ public class ScanMaltaStepDefs {
 
     @Given("my shopping cart is empty")
     public void my_shopping_cart_is_empty() {
-        sut.goToCart();
         sut.emptyCart();
     }
 
@@ -144,5 +143,26 @@ public class ScanMaltaStepDefs {
         sut.getCartAmount();
         sut.cartHasMultipleItems(int1);
     }
+
+    //6
+//    @Given("I am a logged in user on the website")
+//    public void i_am_a_logged_in_user_on_the_website() {
+//        // Write code here that turns the phrase above into concrete actions
+//        throw new cucumber.api.PendingException();
+//    }
+
+    @Given("my shopping cart has {int} products")
+    public void my_shopping_cart_has_products(Integer int1) {
+        sut.emptyCart();
+        sut.addTwoProducts();
+        sut.getCartAmount();
+        sut.cartHasMultipleItems(int1);
+    }
+
+    @When("I remove the first product in my cart")
+    public void i_remove_the_first_product_in_my_cart() {
+        sut.removeFirstProduct();
+    }
+
 
 }
