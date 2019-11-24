@@ -133,7 +133,7 @@ public class ScanMaltaPageObject {
 
     public void cartHasMultipleItems(int int1) {
         int items = getCartAmount();
-        System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
+        //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
         assertEquals(items, int1);
     }
 

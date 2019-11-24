@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eaeaff12-781a-4851-b2f0-143ffa1c77eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/ScanMalta.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +180,8 @@
       <workItem from="1574444025028" duration="589000" />
       <workItem from="1574444721730" duration="164000" />
       <workItem from="1574445355724" duration="2785000" />
-      <workItem from="1574497811935" duration="7114000" />
+      <workItem from="1574497811935" duration="7402000" />
+      <workItem from="1574594256689" duration="3548000" />
     </task>
     <servers />
   </component>

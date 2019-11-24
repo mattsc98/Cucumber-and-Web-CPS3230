@@ -83,7 +83,41 @@ This amount is then asserted to be equal to 1.
 
 
 -Scenario 5
-Starts off with Empty cart
+The login and empty cart checked are done using the previous methods.
+Multiple products are selected and added to the cart within the 
+selectMultipleProductsAndAddToCart method.
+In this method a loop is run where for i amount of times (i being not equal to int1, which
+is the amount to be added to cart).
+First a search is performed for "ssd". 
+Then a list of WebElement is used to list all the products displayed.
+The ith product is then clicked on and added to cart, ending the iteration.
+This is repeated until the required amounts have been added to the cart.
+This is all verified within the cartHasMultipleItems.
+This method works just like cartHasOneItem but for multiple products.
+
+
+-Scenario 6
+This scenario begins by logging in, emptying the cart and then adding 2 products.
+To add 2 products, a method was created which performs 2 different searches and 
+adds the 1st item that comes up to the cart.
+The removeFirstProduct works by breaking down the view WebElements until the 1st
+row of the table holding the items in the cart is found.
+First the table is found, then the body within it and then finally the 1st row
+within all that. 
+From here the remove button is found and clicked to remove the product from the cart.
+This is verified the same way scenario 5 was verified.
+
+
+
+  Scenario: 6 Removing a product from cart
+  Given I am a logged in user on the website "farseersc28@gmail.com" and "Test@123"
+  And my shopping cart has 2 products
+  When I remove the first product in my cart
+  Then my shopping cart should contain 1 item
+
+
+
+
 
 
 
