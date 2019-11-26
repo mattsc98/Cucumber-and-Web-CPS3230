@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaeaff12-781a-4851-b2f0-143ffa1c77eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: 5 Add multiple products to cart">
+  <component name="RunManager" selected="Cucumber java.Scenario: 1 Valid Login">
     <configuration name="Scenario: 1 Valid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" />
@@ -149,9 +148,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
         <item itemvalue="Cucumber java.Scenario: 5 Add multiple products to cart" />
         <item itemvalue="Cucumber java.Scenario: 6 Removing a product from cart" />
-        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
         <item itemvalue="Cucumber java.Scenario: 4 Add product to cart" />
         <item itemvalue="Cucumber java.Scenario: 3 Product Search" />
       </list>
@@ -181,7 +180,7 @@
       <workItem from="1574445355724" duration="2785000" />
       <workItem from="1574497811935" duration="7402000" />
       <workItem from="1574594256689" duration="3548000" />
-      <workItem from="1574752124797" duration="3631000" />
+      <workItem from="1574752124797" duration="3656000" />
     </task>
     <servers />
   </component>

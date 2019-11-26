@@ -28,6 +28,7 @@ public class ScanMaltaStepDefs {
         System.setProperty("webdriver.chrome.driver", "D:/matts/Downloads/chromedriver.exe");
         browser = new ChromeDriver();
         sut = new ScanMaltaPageObject(browser);
+        browser.manage().window().maximize();
     }
 
     @After
