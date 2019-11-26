@@ -86,7 +86,7 @@ public class ScanMaltaPageObject {
 //        browser.findElement(By.id("empty_cart_button")).click();
         goToCart();
         if(getCartAmount() != 0) {
-            browser.findElement(By.id("empty_cart_button")).click();
+            browser.findElement(By.id("empty_cart_button")).sendKeys("\n");
         }
         sleep(2);
     }
@@ -114,7 +114,7 @@ public class ScanMaltaPageObject {
 
     public void selectMultipleProductsAndAddToCart(int int1) {
         //create list to hold all the list item products displayed, then add to cart
-
+        emptyCart();
         int i = 0;
 
         do {
