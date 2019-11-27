@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaeaff12-781a-4851-b2f0-143ffa1c77eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -180,7 +182,8 @@
       <workItem from="1574445355724" duration="2785000" />
       <workItem from="1574497811935" duration="7402000" />
       <workItem from="1574594256689" duration="3548000" />
-      <workItem from="1574752124797" duration="3656000" />
+      <workItem from="1574752124797" duration="5589000" />
+      <workItem from="1574851297200" duration="6441000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,5 @@
+Task 1 - Develop Automated Tests using Cucumber+Webdriver
+
 After setting up the maven project, the initial classes and methods were created. 
 ScanMalta was chosen as the site to be tested on as it was recommended as an example
 and I have also used the site before. Therefore I already had an idea of how the 
@@ -108,13 +110,25 @@ From here the remove button is found and clicked to remove the product from the 
 This is verified the same way scenario 5 was verified.
 
 
+___________________________________________________________________________________________________________________
 
-  Scenario: 6 Removing a product from cart
-  Given I am a logged in user on the website "farseersc28@gmail.com" and "Test@123"
-  And my shopping cart has 2 products
-  When I remove the first product in my cart
-  Then my shopping cart should contain 1 item
+Task 2 – Model Based Testing
 
+Typical User Behavior Assumptions:
+-user would first log in once they enter the site
+-can decide to log out at any point
+-once logged out they will log in again if they need to use the site
+-once the user visits the checkout page, his/her interaction with the website stops
+
+The first thing the user does when entering the site is logging in.
+Next they would search for the product they are looking for.
+From here they can either choose any of the listed products and add them to cart
+or perform another search.
+Once a product has been added, the user has multiple options.
+They can either search for something else, remove an item from the cart 
+or checkout. 
+If they decide to remove a product, they can then do another search or
+checkout.
 
 
 

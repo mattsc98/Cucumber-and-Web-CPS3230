@@ -106,7 +106,7 @@ public class ScanMaltaPageObject {
         return Integer.parseInt(amount.split(" ")[0]);
     }
 
-    public void cartHasOneItem(int int1) {
+    public void cartHasOneItem(int int1) { //remove this as cartHasMultipleItems does the same thing
         int items = getCartAmount();
         //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
         assertEquals(items, int1);
