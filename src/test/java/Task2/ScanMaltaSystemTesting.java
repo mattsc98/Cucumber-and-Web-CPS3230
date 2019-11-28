@@ -1,6 +1,8 @@
-public class ScanMalta {
-    private boolean loggedIn = false, loggedOut = true, searching = false, addingToCart = false,
-                    removingFromCart = false, checkingOut = false;
+package Task2;
+
+ class ScanMaltaSystemTesting {
+    private boolean loggedIn = false, loggedOut = true, searching = false,
+            addingToCart = false, removingFromCart = false, checkingOut = false;
 
     boolean isLoggedIn() {
         return loggedIn;
@@ -18,9 +20,13 @@ public class ScanMalta {
         return addingToCart;
     }
 
-    boolean isRemovingFromCart() { return removingFromCart; }
+    boolean isRemovingFromCart() {
+        return removingFromCart;
+    }
 
-    boolean isCheckingOut() { return checkingOut; }
+    boolean isCheckingOut() {
+        return checkingOut;
+    }
 
     void loggingIn() {
         if (loggedIn && !loggedOut && !searching && !addingToCart && !removingFromCart && !checkingOut) {
