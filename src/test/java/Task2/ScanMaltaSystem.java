@@ -1,8 +1,18 @@
 package Task2;
 
- class ScanMaltaSystemTesting {
+import org.openqa.selenium.WebDriver;
+
+class ScanMaltaSystem {
+
+     WebDriver browser;
+
     private boolean loggedIn = false, loggedOut = true, searching = false,
             addingToCart = false, removingFromCart = false, checkingOut = false;
+
+    public ScanMaltaSystem(WebDriver browser) {
+        this.browser = browser;
+        browser.get("https://www.scanmalta.com/newstore/customer/account/login/");
+    }
 
     boolean isLoggedIn() {
         return loggedIn;

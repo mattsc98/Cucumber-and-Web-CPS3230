@@ -1,95 +1,44 @@
 package Task2;
 
-import enums.ScanMaltaStates;
-import nz.ac.waikato.modeljunit.Action;
-import nz.ac.waikato.modeljunit.FsmModel;
+import nz.ac.waikato.modeljunit.GreedyTester;
+import nz.ac.waikato.modeljunit.StopOnFailureListener;
+import nz.ac.waikato.modeljunit.coverage.ActionCoverage;
+import nz.ac.waikato.modeljunit.coverage.StateCoverage;
+import nz.ac.waikato.modeljunit.coverage.TransitionPairCoverage;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import pageObjects.ScanMaltaPageObject;
 
-import static org.junit.Assert.assertEquals;
+import java.util.Random;
 
-public class ScanModelTest implements FsmModel {
+public class ScanModelTest {
 
-    private ScanMaltaSystemTesting sut = new ScanMaltaSystemTesting();
+    WebDriver browser;
 
-    private ScanMaltaStates modelState = ScanMaltaStates.LOGGED_OUT;
-
-    private boolean loggedIn, loggedOut, searching, addingToCart,
-            removingFromCart, checkingOut;
-
-    public ScanMaltaStates getState() {
-        return modelState;
+    @Before
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver", "D:/matts/Downloads/chromedriver.exe");
+        browser = new ChromeDriver();
+        browser.manage().window().maximize();
     }
 
-    public void reset(final boolean b) {
-        modelState = ScanMaltaStates.LOGGED_OUT;
-        loggedOut = true;
-        loggedIn = false;
-        searching = false;
-        addingToCart = false;
-        removingFromCart = false;
-        checkingOut = false;
+    @After
+    public void teardown() { browser.quit(); }
 
-        if(b) {
-            sut = new ScanMaltaSystemTesting();
-        }
+    @Test
+    public void ScanMaltaTestRunner() {
+        GreedyTester tester = new GreedyTester(new ScanModel(browser));
+        tester.setRandom(new Random());
+        tester.buildGraph();
+        tester.addListener(new StopOnFailureListener());
+        tester.addListener("verbose");
+        tester.addCoverageMetric(new TransitionPairCoverage());
+        tester.addCoverageMetric(new StateCoverage());
+        tester.addCoverageMetric(new ActionCoverage());
+        tester.generate(500);
+        tester.printCoverage();
     }
-
-    public boolean loggingInGuard(){
-        return getState().equals(ScanMaltaStates.LOGGED_OUT);
-    }
-
-    public @Action
-    void loggingIn(){
-        sut.isLoggedIn();
-
-        loggedIn = true;
-        modelState = ScanMaltaStates.LOGGED_IN;
-
-        assertEquals("", loggedIn, sut.isLoggedIn());
-    }
-
-    public boolean loggingOutGuard(){
-        return getState().equals(ScanMaltaStates.LOGGED_IN);
-    }
-
-    public @Action void loggingOut(){
-        sut.isLoggedOut();
-
-        loggedIn = false;
-        modelState = ScanMaltaStates.LOGGED_OUT;
-
-        assertEquals("", !loggedIn ,!sut.isLoggedIn());
-    }
-
-    public boolean searchingGuard(){
-        return getState().equals(ScanMaltaStates.LOGGED_IN);
-    }
-    public @Action void searchingProduct(){
-        sut.isSearching();
-
-        searching = true;
-        modelState = ScanMaltaStates.SEARCHING;
-
-        assertEquals("", searching && loggedIn ,sut.isSearching());
-    }
-
-    public boolean addingItemGuard(){
-        return getState().equals(ScanMaltaStates.SEARCHING);
-    }
-
-    public @Action void addingItemToCart(){
-        sut.addToCart();
-        addingToCart = true;
-
-        modelState = ScanMaltaStates.ADDING_TO_CART;
-
-        assertEquals("", searching ,sut.isSearching());
-        assertEquals("", loggedIn, sut.isLoggedIn());
-        assertEquals("", addingToCart ,sut.isAddingToCart());
-        assertEquals("", checkingOut ,sut.isCheckingOut());
-    }
-
-
-
-
 }
-

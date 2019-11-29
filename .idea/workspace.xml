@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eaeaff12-781a-4851-b2f0-143ffa1c77eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ScanMalta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ScanMaltaModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/ScanMaltaStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/ScanMaltaStates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanMaltaSystemTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Task2/ScanMaltaSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Task2/ScanModel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +190,8 @@
       <workItem from="1574594256689" duration="3548000" />
       <workItem from="1574752124797" duration="5589000" />
       <workItem from="1574851297200" duration="10428000" />
-      <workItem from="1574929913203" duration="14314000" />
+      <workItem from="1574929913203" duration="14421000" />
+      <workItem from="1575020776591" duration="2970000" />
     </task>
     <servers />
   </component>
