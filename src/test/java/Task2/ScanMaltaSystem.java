@@ -24,9 +24,13 @@ class ScanMaltaSystem {
     }
 
     boolean isLoggedIn() throws InterruptedException {
-//        return loggedIn;
+        //return loggedIn = true;
         sleep(2);
         return browser.findElement(By.className("hello")).getText().contains("Hello, Matthew Schembri!");
+// return isLoggedIn();
+//        sleep(2);
+        //return browser.findElement(By.className("hello")).getText().contains("Hello, Matthew Schembri!");
+
     }
 
     boolean isLoggedOut() {
@@ -53,17 +57,20 @@ class ScanMaltaSystem {
 //        if (loggedIn && !loggedOut && !searching && !addingToCart && !removingFromCart && !checkingOut) {
 //farseersc28@gmail.com" and "Test@123"
 //        }
+        //loggedIn = true;
+        sleep(2);
         browser.findElement(By.name("login[username]")).sendKeys("farseersc28@gmail.com");
         browser.findElement(By.name("login[password]")).sendKeys("Test@123");
-        browser.findElement(By.name("send")).submit();
+        browser.findElement(By.name("send")).click();
         sleep(2);
     }
 
     void loggingOut() {
-        if (!loggedIn && loggedOut && !searching && !addingToCart && !removingFromCart && !checkingOut) {
-            loggedOut = false;
-            loggedIn = true;
-        }
+//        if (!loggedIn && loggedOut && !searching && !addingToCart && !removingFromCart && !checkingOut) {
+//            loggedOut = false;
+//            loggedIn = true;
+//        }
+        browser.get("https://www.scanmalta.com/newstore/customer/account/logoutSuccess/");
     }
 
     void searchItem() {
