@@ -128,9 +128,9 @@ public class ScanMaltaStepDefs {
 
     //5
 //    @Given("I am a logged in user on the website {string} and {string}")
-//    public void i_am_a_logged_in_user_on_the_website(String username, String password) {
-//        // Write code here that turns the phrase above into concrete actions
-//        throw new cucumber.api.PendingException();
+//    public void i_am_a_logged_in_user_on_the_website(String username, String password)
+//        sut.getPage();
+//        sut.validLogin(username, password);
 //    }
 
 

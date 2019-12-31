@@ -112,24 +112,6 @@ This is verified the same way scenario 5 was verified.
 
 ___________________________________________________________________________________________________________________
 
-Task 2 – Model Based Testing
-
-Typical User Behavior Assumptions:
--user would first log in once they enter the site
--can decide to log out at any point
--once logged out they will log in again if they need to use the site
--once the user visits the checkout page, his/her interaction with the website stops
-
-The first thing the user does when entering the site is logging in.
-Next they would search for the product they are looking for.
-From here they can either choose any of the listed products and add them to cart
-or perform another search.
-Once a product has been added, the user has multiple options.
-They can either search for something else, remove an item from the cart 
-or checkout. 
-If they decide to remove a product, they can then do another search or
-checkout.
-
 
 
 

@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaeaff12-781a-4851-b2f0-143ffa1c77eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanMaltaSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Task2/ScanMaltaSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Task2/ScanModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Task2/ScanModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanMaltaSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Task2/ScanMaltaSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Task2/ScanModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanModelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Task2/ScanModelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanMaltaSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanModelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/ScanMaltaStates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanMaltaSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanModelTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/enums/ScanMaltaStates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +60,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ScanModelTest">
+  <component name="RunManager" selected="Cucumber java.Scenario: 5 Add multiple products to cart">
     <configuration name="Scenario: 1 Valid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" />
@@ -149,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ScanModelTest" />
-        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
         <item itemvalue="Cucumber java.Scenario: 5 Add multiple products to cart" />
-        <item itemvalue="Cucumber java.Scenario: 6 Removing a product from cart" />
         <item itemvalue="Cucumber java.Scenario: 4 Add product to cart" />
+        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
+        <item itemvalue="JUnit.ScanModelTest" />
+        <item itemvalue="Cucumber java.Scenario: 6 Removing a product from cart" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +204,10 @@
       <workItem from="1575020776591" duration="11372000" />
       <workItem from="1575437393673" duration="18000" />
       <workItem from="1575437971939" duration="15128000" />
-      <workItem from="1575543094638" duration="242000" />
+      <workItem from="1575543094638" duration="13136000" />
+      <workItem from="1577357218056" duration="1208000" />
+      <workItem from="1577623247651" duration="2933000" />
+      <workItem from="1577704287439" duration="779000" />
     </task>
     <servers />
   </component>
@@ -220,25 +228,37 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="75" key="#Project_Structure" timestamp="1575549116163">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="75" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1575549116163" />
     <state x="499" y="172" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1575444461431">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="172" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1575444461431" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1575469204359">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1575544162037">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1575469204359" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1575469204359">
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1575544162037" />
+    <state width="1493" height="401" key="GridCell.Tab.0.bottom" timestamp="1577358433630">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1575469204359" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1575469204359">
+    <state width="1493" height="401" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
+    <state width="1493" height="401" key="GridCell.Tab.0.center" timestamp="1577358433630">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1575469204359" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1575469204359">
+    <state width="1493" height="401" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
+    <state width="1493" height="401" key="GridCell.Tab.0.left" timestamp="1577358433630">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1575469204359" />
+    <state width="1493" height="401" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
+    <state width="1493" height="401" key="GridCell.Tab.0.right" timestamp="1577358433630">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="401" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
+    <state x="209" y="37" key="new project wizard" timestamp="1575547204438">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="209" y="37" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1575547204438" />
   </component>
 </project>

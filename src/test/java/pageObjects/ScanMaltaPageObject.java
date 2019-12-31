@@ -57,7 +57,6 @@ public class ScanMaltaPageObject {
     }
 
     public void selectFirstProduct() {
-        //browser.findElement(By.xpath("/html/body/div[1]/div/section/ul/li[1]")).submit();
         //create list to hold all the list item products displayed, then retrieve the 1st one
         List<WebElement> productsList = browser.findElements(By.className("item-images"));
         WebElement firstProduct = productsList.get(0);
