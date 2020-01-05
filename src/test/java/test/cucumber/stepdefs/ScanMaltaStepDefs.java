@@ -10,18 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageObjects.ScanMaltaPageObject;
 
-import static org.junit.Assert.assertTrue;
-
 public class ScanMaltaStepDefs {
 
     WebDriver browser = null;
     public ScanMaltaPageObject sut;
-
-    public void sleep(int seconds) {
-        try {
-            Thread.sleep(seconds*1000);
-        } catch (Exception e) {}
-    }
 
     @Before
     public void setup() {
@@ -123,7 +115,7 @@ public class ScanMaltaStepDefs {
     @Then("my shopping cart should contain {int} item")
     public void my_shopping_cart_should_contain_item(int int1) {
         sut.getCartAmount();
-        sut.cartHasOneItem(int1);
+        sut.checkCartAmount(int1);
     }
 
     //5
@@ -136,13 +128,14 @@ public class ScanMaltaStepDefs {
 
     @When("I add {int} products to my shopping cart")
     public void i_add_num_products_products_to_my_shopping_cart(int int1) {
-        sut.selectMultipleProductsAndAddToCart(int1);
+        //sut.selectMultipleProductsAndAddToCart(int1);
+        sut.selectMultipleProductsAndAddToCart2(int1);
     }
 
     @Then("my shopping cart should contain {int} items")
     public void my_shopping_cart_should_contain_num_products_items(int int1) {
         sut.getCartAmount();
-        sut.cartHasMultipleItems(int1);
+        sut.checkCartAmount(int1);
     }
 
     //6
@@ -157,7 +150,7 @@ public class ScanMaltaStepDefs {
         sut.emptyCart();
         sut.addTwoProducts();
         sut.getCartAmount();
-        sut.cartHasMultipleItems(int1);
+        sut.checkCartAmount(int1);
     }
 
     @When("I remove the first product in my cart")

@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="eaeaff12-781a-4851-b2f0-143ffa1c77eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanMaltaSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Task2/ScanModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/ScanMaltaStates.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ScanMaltaPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cucumber/stepdefs/ScanMaltaStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanMaltaSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Task2/ScanModelTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/enums/ScanMaltaStates.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageObjects/ScanMaltaPageObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/cucumber/stepdefs/ScanMaltaStepDefs.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +52,25 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: 5 Add multiple products to cart">
+  <component name="RunManager" selected="Cucumber java.Feature: ScanMalta">
+    <configuration name="Feature: ScanMalta" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" />
+      <option name="GLUE" value="test.cucumber.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Assignment 2" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: ScanMalta" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: 1 Valid Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/ScanMalta.feature" />
@@ -137,28 +147,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScanModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment 2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Task2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Task2" />
-      <option name="MAIN_CLASS_NAME" value="Task2.ScanModelTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber java.Scenario: 5 Add multiple products to cart" />
-        <item itemvalue="Cucumber java.Scenario: 4 Add product to cart" />
-        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
-        <item itemvalue="JUnit.ScanModelTest" />
+        <item itemvalue="Cucumber java.Feature: ScanMalta" />
         <item itemvalue="Cucumber java.Scenario: 6 Removing a product from cart" />
+        <item itemvalue="Cucumber java.Scenario: 5 Add multiple products to cart" />
+        <item itemvalue="Cucumber java.Scenario: 1 Valid Login" />
+        <item itemvalue="Cucumber java.Scenario: 4 Add product to cart" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +202,10 @@
       <workItem from="1575543094638" duration="13136000" />
       <workItem from="1577357218056" duration="1208000" />
       <workItem from="1577623247651" duration="2933000" />
-      <workItem from="1577704287439" duration="779000" />
+      <workItem from="1577704287439" duration="907000" />
+      <workItem from="1578228026887" duration="8245000" />
+      <workItem from="1578248309574" duration="2966000" />
+      <workItem from="1578255923698" duration="3421000" />
     </task>
     <servers />
   </component>
@@ -240,22 +238,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1575544162037" />
-    <state width="1493" height="401" key="GridCell.Tab.0.bottom" timestamp="1577358433630">
+    <state width="1493" height="331" key="GridCell.Tab.0.bottom" timestamp="1578259369650">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
-    <state width="1493" height="401" key="GridCell.Tab.0.center" timestamp="1577358433630">
+    <state width="1493" height="331" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1578259369650" />
+    <state width="1493" height="331" key="GridCell.Tab.0.center" timestamp="1578259369645">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
-    <state width="1493" height="401" key="GridCell.Tab.0.left" timestamp="1577358433630">
+    <state width="1493" height="331" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1578259369645" />
+    <state width="1493" height="331" key="GridCell.Tab.0.left" timestamp="1578259369645">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
-    <state width="1493" height="401" key="GridCell.Tab.0.right" timestamp="1577358433630">
+    <state width="1493" height="331" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1578259369645" />
+    <state width="1493" height="331" key="GridCell.Tab.0.right" timestamp="1578259369649">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577358433630" />
+    <state width="1493" height="331" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1578259369649" />
     <state x="209" y="37" key="new project wizard" timestamp="1575547204438">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

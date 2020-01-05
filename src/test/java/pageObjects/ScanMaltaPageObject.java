@@ -43,7 +43,7 @@ public class ScanMaltaPageObject {
         browser.findElement(By.name("login[username]")).sendKeys(username);
         browser.findElement(By.name("login[password]")).sendKeys(wrongPass);
         browser.findElement(By.name("send")).submit();
-        sleep(3);
+        sleep(2);
     }
 
     public void validateInvalidLogin() {
@@ -69,20 +69,11 @@ public class ScanMaltaPageObject {
     }
 
     public void goToCart() {
-        //browser.findElement(By.className("icon-cart")).submit(); CHECK THIS LATER
         browser.get("https://www.scanmalta.com/newstore/checkout/cart/");
         sleep(3);
     }
 
     public void emptyCart() {
-        //assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
-        //rather than check if it's empty, just make the cart empty if it is not empty
-//        if(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty")) {
-//            assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
-//        }
-//        else browser.findElement(By.id("empty_cart_button")).click();
-        //assertTrue(browser.findElement(By.className("page-title")).getText().contains("Shopping Cart is Empty"));
-//        browser.findElement(By.id("empty_cart_button")).click();
         goToCart();
         if(getCartAmount() != 0) {
             browser.findElement(By.id("empty_cart_button")).sendKeys("\n");
@@ -92,7 +83,7 @@ public class ScanMaltaPageObject {
 
     public void addToCart() {
         browser.findElement(By.id("product-addtocart-button")).submit();
-        sleep(7); //due to popup that follows
+        //sleep(7); //due to popup that follows
     }
 
     public int getCartAmount() {
@@ -105,36 +96,61 @@ public class ScanMaltaPageObject {
         return Integer.parseInt(amount.split(" ")[0]);
     }
 
-    public void cartHasOneItem(int int1) { //remove this as cartHasMultipleItems does the same thing
+    public void checkCartAmount(int int1) { // cartHasMultipleItems does the same thing
         int items = getCartAmount();
         //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
         assertEquals(items, int1);
     }
 
-    public void selectMultipleProductsAndAddToCart(int int1) {
-        //create list to hold all the list item products displayed, then add to cart
+//    public void selectMultipleProductsAndAddToCart(int int1) {
+//        //create list to hold all the list item products displayed, then add to cart
+//        emptyCart();
+//        int i = 0;
+//
+//        /*
+//        For some reason this method is no longer working. The first 4 items added
+//        are fine, but when the loop reaches i=4 it simply doesn't find the item
+//        and clicks on nothing, thus giving an error when trying to add to cart.
+//        Manually doing WebElement product = productsList.get(4); works, just not
+//        when it reaches 4 via the loop. Instead another method was created which
+//        does the same thing only passes different search strings from a string
+//        array.
+//         */
+//        do {
+//            search("ssd");
+//            List<WebElement> productsList = browser.findElements(By.className("item-images"));
+//            System.out.println("Loop No. " + i);
+//            WebElement product = productsList.get(i);
+//            sleep(2);
+//            product.click();
+//            sleep(2);
+//            addToCart();
+//            i++;
+//        }while(i != int1);
+//    }
+
+    public void selectMultipleProductsAndAddToCart2(int int1) {
+        //create list to hold all the list items to search, then add to cart
         emptyCart();
         int i = 0;
-
+        String[] productsSearch = {"ssd", "wire", "dell", "tower", "mouse",
+                "keyboard", "laptop", "mac", "printer", "scanner"};
         do {
-            search("ssd");
+            search(productsSearch[i]);
             List<WebElement> productsList = browser.findElements(By.className("item-images"));
-            System.out.println("Loop No. " + i);
-            WebElement product = productsList.get(i);
-            sleep(2);
+            System.out.println("Loop No. " + (i+1));
+            WebElement product = productsList.get(0);
             product.click();
             sleep(2);
             addToCart();
             i++;
         }while(i != int1);
-        
     }
-
-    public void cartHasMultipleItems(int int1) {
-        int items = getCartAmount();
-        //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
-        assertEquals(items, int1);
-    }
+//    public void cartHasMultipleItems(int int1) {
+//        int items = getCartAmount();
+//        //System.out.println("Number in cart " + items +" should contain " + int1); //test to see amount in cart and what it should have
+//        assertEquals(items, int1);
+//    }
 
     public void addTwoProducts() {
         search("ssd");
@@ -147,6 +163,7 @@ public class ScanMaltaPageObject {
     }
 
     public void removeFirstProduct() {
+        sleep(7); //due to popup that follows
         WebElement shoppingCartTable = browser.findElement(By.id("shopping-cart-table"));
         WebElement shoppingCartTableBody = shoppingCartTable.findElement(By.xpath("//table/tbody"));
         WebElement firstProduct = shoppingCartTableBody.findElement(By.className("first"));
